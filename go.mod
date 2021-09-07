@@ -84,7 +84,7 @@ require (
 	golang.org/x/crypto v0.0.0-20210616213533-5ff15b29337e
 	golang.org/x/sys v0.0.0-20210630005230-0f9fa26af87c
 	golang.org/x/time v0.0.0-20210220033141-f8bda1e9f3ba
-	golang.org/x/tools v0.1.1 // indirect
+	golang.org/x/tools/gopls v0.7.1 // indirect
 	google.golang.org/api v0.31.0
 	gopkg.in/yaml.v2 v2.4.0
 )

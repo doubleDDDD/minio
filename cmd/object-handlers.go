@@ -1522,6 +1522,7 @@ func (api objectAPIHandlers) PutObjectHandler(w http.ResponseWriter, r *http.Req
 	}
 
 	/// maximum Upload size for objects in a single operation
+	// max is 5TB
 	if isMaxObjectSize(size) {
 		writeErrorResponse(ctx, w, errorCodes.ToAPIErr(ErrEntityTooLarge), r.URL)
 		return

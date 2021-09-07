@@ -172,6 +172,7 @@ var rejectedBucketAPIs = []rejectedAPI{
 }
 
 // registerAPIRouter - registers S3 compatible APIs.
+// 注册了所有HTTP相关的事件处理回调函数
 func registerAPIRouter(router *mux.Router) {
 	// Initialize API.
 	api := objectAPIHandlers{
@@ -290,6 +291,7 @@ func registerAPIRouter(router *mux.Router) {
 			collectAPIStats("putobject", maxClients(gz(httpTraceHdrs(api.PutObjectExtractHandler)))))
 
 		// PutObject
+		// 上传一个对象
 		router.Methods(http.MethodPut).Path("/{object:.+}").HandlerFunc(
 			collectAPIStats("putobject", maxClients(gz(httpTraceHdrs(api.PutObjectHandler)))))
 
