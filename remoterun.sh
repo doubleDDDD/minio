@@ -1,8 +1,8 @@
 #!/bin/bash
 node0ip="172.20.0.3"
-node1ip="172.20.0.3"
-node2ip="172.20.0.3"
-node3ip="172.20.0.3"
+node1ip="172.20.0.4"
+node2ip="172.20.0.5"
+node3ip="172.20.0.6"
 
 devnodeip1="172.17.0.2"
 devnodeip2="172.20.0.2"
@@ -28,5 +28,5 @@ for ip in ${targetiplist[@]}; do
 done
 
 for ip in ${targetiplist[@]}; do
-    ssh root@$ip "/root/double_D/minio/run.sh"
+    ssh root@$ip "cd /root/double_D/minio && ./run.sh"
 done
