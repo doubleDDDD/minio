@@ -81,6 +81,9 @@ install: build
 	@mkdir -p $(GOPATH)/bin && cp -f $(PWD)/minio $(GOPATH)/bin/minio
 	@echo "Installation successful. To learn more, try \"minio --help\"."
 
+# add tag to start/stop minio
+
+
 clean:
 	@echo "Cleaning up all the generated files"
 	@find . -name '*.test' | xargs rm -fv
