@@ -83,7 +83,6 @@ install: build
 
 # add tag to start/stop minio
 
-
 clean:
 	@echo "Cleaning up all the generated files"
 	@find . -name '*.test' | xargs rm -fv
